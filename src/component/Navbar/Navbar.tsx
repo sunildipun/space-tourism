@@ -6,10 +6,16 @@ export default function Navbar() {
         <Link to="/" className="title">Space Tourism</Link>
         <ul className='menu'>
             <li>
+                <Link to="/home">Home</Link>
+            </li>
+            <li>
                 <Link to="/destination">Destination</Link>
             </li>
             <li>
-                <Link to="/about-us">Home</Link>
+                <Link to="/crew">Crew</Link>
+            </li>
+            <li>
+                <Link to="/technology">Technology</Link>
             </li>
         </ul>
     </nav>
