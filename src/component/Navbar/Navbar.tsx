@@ -1,22 +1,24 @@
 import './Navbar.css';
+// import Logo  from './../../../src/assets/'
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+    const navArray = ['home', 'destination', 'crew', 'technology'];
+    const listItems = navArray.map((item,index) =>
+    // Correct! Key should be specified inside the array.
+    <li>
+        <Link to="/home">0{index} {item}</Link>
+    </li>
+  );
     return <nav className="nav">
-        <Link to="/" className="title">Space Tourism</Link>
+        <Link to="/" className="title">
+            {/* <img src={Logo}/> */}
+            Space Tourism
+        </Link>
         <ul className='menu'>
-            <li>
-                <Link to="/home">Home</Link>
-            </li>
-            <li>
-                <Link to="/destination">Destination</Link>
-            </li>
-            <li>
-                <Link to="/crew">Crew</Link>
-            </li>
-            <li>
-                <Link to="/technology">Technology</Link>
-            </li>
+            {
+                listItems
+            }
         </ul>
     </nav>
 }
