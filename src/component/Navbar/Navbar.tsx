@@ -7,7 +7,7 @@ export default function Navbar() {
     const navArray = ['home', 'destination', 'crew', 'technology'];
     const listItems = navArray.map((item,index) =>
     // Correct! Key should be specified inside the array.
-    <li>
+    <li className='nav-items'>
         <Link key={index} to={item}>0{index} {item}</Link>
     </li>
   );
